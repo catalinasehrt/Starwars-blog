@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel-eslint",
   "plugins": [
     "react"
   ],
@@ -24,7 +24,7 @@
         "objects": "never",
         "imports": "never",
         "exports": "never",
-        "functions": "ignore",
+        "functions": "ignore"
     }],
     "react/prop-types": [2]
   }

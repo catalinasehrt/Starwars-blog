@@ -1,3 +1,22 @@
 /* 
     General Styles
 */
+body{
+    background-color:black;
+    background-image: url(https://cdn.vectorstock.com/i/1000x1000/67/74/clusters-of-star-in-the-dark-sky-black-background-vector-12336774.webp);
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: rgb(241, 20, 20);
+    
+    font-size: 50px;
+    padding: 20px;
+}
+
+footer{
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
