@@ -41,7 +41,7 @@ export const Card2=(props)=>{
 
       </div>
       <div className="col">
-        <button type="button" className="btn btn-outline-dark m-2">🧡</button>
+        <button type="button" className="btn btn-outline-dark ">🧡</button>
       </div>
        
      

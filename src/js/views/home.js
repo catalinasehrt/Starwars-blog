@@ -8,16 +8,8 @@ import { Cards } from "../component/cards";
 
 export const Home = () => (
 	
-
-
-
-	
-
 	<div className="container text-center m-5 ">
 		
-		
-
-
 		<h1 className="fst-oswald">Personajes</h1>
 		
 		<Cards

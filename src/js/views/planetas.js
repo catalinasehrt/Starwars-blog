@@ -11,7 +11,7 @@ return <div className="container">
 <div className="row">
     <Card2
     img="https://theobjective.com/wp-content/uploads/2016/06/Planetas.jpeg"
-    
+    route="/detalle/planetas/1"
     
     />
 
