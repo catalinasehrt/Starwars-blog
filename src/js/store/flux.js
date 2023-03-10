@@ -12,7 +12,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+		     
+		         personajes:[],
+		         planetas:[],
+		         
+
+		         favoritos:[],
 
 			
 		},
@@ -40,8 +46,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			}
+		},
+		getPersonajes: ()=> {
+			fetch("https://www.swapi.tech/api/people")
+			.then(response=>response.json())
+			.then(data=>setStore({personajes:data.results}))
+
+		},
+		getPlanetas: ()=> {
+			fetch("https://www.swapi.tech/api/planets")
+			.then(response=>response.json())
+			.then(data=>setStore({planetas:data.results}))
+		},
+		
+			
+		agregarFavoritos:(titulo)=>{
+			const store = getStore();
+			console.log("agregar favoritos: "+titulo)
+			setStore({favoritos:[...store.favoritos,titulo]})
+
+		},
+	}
+
+
+
+
+
+
 		}
-	};
-};
+	
+
 
 export default getState;

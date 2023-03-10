@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Cards } from "../component/cards";
+import { Context } from "../store/appContext";
 
 
 
 
-export const Home = () => (
-	
-	<div className="container text-center m-5 ">
+
+
+
+export const Home = () => {
+	const {store,actions} = useContext(Context);
+	return <div className="container text-center m-5 ">
 		
 		<h1 className="fst-oswald">Personajes</h1>
 		
@@ -31,5 +35,7 @@ export const Home = () => (
 		
 	</div>
 	
+
 	
-);
+	
+}

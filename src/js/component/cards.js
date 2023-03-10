@@ -27,22 +27,22 @@ export const Card2=(props)=>{
   return <div className="card2" style={{width: "18rem"}}>
   <img src= {props.img} className="card-img-top" alt="..."/>
   <div className="card-body ">
-    <h5 className="card-title">{props.titulo} </h5>
+    <h5 className="card-title text-light">{props.titulo} </h5>
     <p className="card-text">{props.descripcion} </p>
+    
     
     <div className=" row">
       <div className="col">
 
         <Link to ={props.route}>
 
-         <button  className="btn btn-warning">ver mas ...</button>
+         <button  className="btn btn-warning m-3"> mas info.</button>
+         <button type="button" className="btn btn-danger ">♥︎</button>
        </Link>
 
 
       </div>
-      <div className="col">
-        <button type="button" className="btn btn-outline-dark ">🧡</button>
-      </div>
+     
        
      
 
