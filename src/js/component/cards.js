@@ -37,7 +37,7 @@ export const Card2=(props)=>{
     <div className=" row">
       <div className="col">
 
-        <Link to ={props.route}>
+       
 
          <button  className="btn btn-warning m-3"> mas info.</button>
          <button type="button" className="btn btn-danger " onClick={()=>{
@@ -45,8 +45,7 @@ export const Card2=(props)=>{
          }
 
          }>♥︎</button>
-       </Link>
-
+     
 
       </div>
      
