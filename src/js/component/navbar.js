@@ -10,7 +10,15 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-danger m-3"> <i className="fa fa-heart text-light m-1" />Favorites</button>
+					
+				<button className="btn btn-danger dropdown-toggle m-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<i className="fa fa-heart text-light m-1" />
+				 Favoritos
+                </button>
+				<ul class="dropdown-menu m-3">
+                <li><button className="dropdown-item" type="button">favorito </button>🗑️</li>
+                <li><button className="dropdown-item" type="button"></button></li>
+                </ul>
 				</Link>
 			</div>
 			

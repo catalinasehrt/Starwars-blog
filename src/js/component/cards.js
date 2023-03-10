@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import {Context} from "../store/appContext";
 
 export const Cards= (props)=>{
+ 
     return <div classNameName="container text-center "> 
    
         
@@ -24,6 +26,7 @@ export const Cards= (props)=>{
 }
 
 export const Card2=(props)=>{
+  const {actions}= useContext(Context)
   return <div className="card2" style={{width: "18rem"}}>
   <img src= {props.img} className="card-img-top" alt="..."/>
   <div className="card-body ">
@@ -37,7 +40,11 @@ export const Card2=(props)=>{
         <Link to ={props.route}>
 
          <button  className="btn btn-warning m-3"> mas info.</button>
-         <button type="button" className="btn btn-danger ">♥︎</button>
+         <button type="button" className="btn btn-danger " onClick={()=>{
+          actions.agregarFavoritos(titulo)
+         }
+
+         }>♥︎</button>
        </Link>
 
 

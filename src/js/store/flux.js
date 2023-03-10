@@ -16,8 +16,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		     
 		         personajes:[],
 		         planetas:[],
-		         
-
 		         favoritos:[],
 
 			
