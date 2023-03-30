@@ -11,20 +11,25 @@ export const Navbar = () => {
 				
 			</Link>
 			<div className="ml-auto">
-				
-					
-				<button className="btn btn-danger dropdown-toggle m-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<i className="fa fa-heart text-light m-1" />
-				 Favoritos
-                </button>
-				<ul class="dropdown-menu m-3">
-					{store.favorito.map((value,index)=>{
-						return ( <li><button className="dropdown-item" type="button">{value}</button>🗑️</li>)
+
+
+			<div className="dropdown">
+            <button className="btn btn-danger dropdown-toggle m-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Favoritos  ♥
+  </button>
+  <ul className="dropdown-menu text-dark">
+    {store.favoritos.map((value,index)=>{
+						return ( <li key={index} className="dropdown-item" type="button">{value}🗑️</li>)
 
 					})}
+  </ul>
+</div>
+				
+				
+					
               
                 
-                </ul>
+               
 				
 			</div>
 			

@@ -1,10 +1,11 @@
+import { faAudioDescription } from "@fortawesome/free-solid-svg-icons";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {Context} from "../store/appContext";
 
 export const Cards= (props)=>{
  
-    return <div classNameName="container text-center "> 
+    return <div classNameName="container text-center m-5"> 
    
         
     <div classNameName="cards m-5">
@@ -37,15 +38,20 @@ export const Card2=(props)=>{
     <div className=" row">
       <div className="col">
 
+        
+
+      <Link to={props.route}>  
+                  <a className="btn btn-warning" onClick={props.action}>Ver detalle</a> 
+                </Link>
+                
+    
+                <button className="btn btn-danger m-2" onClick={()=>{
+                  actions.agregarFavoritos(props.titulo)
+                }}>{props.favoritos} ♥︎</button>
+        
+  
+
        
-
-         <button  className="btn btn-warning m-3"> mas info.</button>
-         <button type="button" className="btn btn-danger " onClick={()=>{
-          actions.agregarFavoritos(titulo)
-         }
-
-         }>♥︎</button>
-     
 
       </div>
      
