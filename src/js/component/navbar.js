@@ -17,11 +17,20 @@ export const Navbar = () => {
             <button className="btn btn-danger dropdown-toggle m-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Favoritos  ♥
   </button>
+
+
+
   <ul className="dropdown-menu text-dark">
     {store.favoritos.map((value,index)=>{
-						return ( <li key={index} className="dropdown-item" type="button">{value}🗑️</li>)
+						return ( <li key={index} className="dropdown-item">{value}
+						<i className="fas fa-trash-alt" 
+		                   onClick= {()=>{
+			                  actions.borrarFavoritos(value.id);
+			              }}></i> 
+		             </li> 
+				)})}
 
-					})}
+				
   </ul>
 </div>
 				

@@ -21,6 +21,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 		},
 		actions: {
+
+
+
+	
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
@@ -43,26 +47,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			}
-		},
-		getPersonajes: ()=> {
-			fetch("https://www.swapi.tech/api/people")
-			.then(response=>response.json())
-			.then(data=>setStore({personajes:data.results}))
-
-		},
-		getPlanetas: ()=> {
-			fetch("https://www.swapi.tech/api/planets")
-			.then(response=>response.json())
-			.then(data=>setStore({planetas:data.results}))
-		},
-		
+			},
+			getPersonajes: ()=> {
+				fetch("https://www.swapi.tech/api/people")
+				.then(response=>response.json())
+				.then(data=>setStore({personajes:data.results}))
+	
+			},
+			getPlanetas: ()=> {
+				fetch("https://www.swapi.tech/api/planets")
+				.then(response=>response.json())
+				.then(data=>setStore({planetas:data.results}))
+			},
 			
-		agregarFavoritos:(titulo)=>{
-			const store = getStore();
-			console.log("agregar favoritos: "+titulo)
-			setStore({favoritos:[...store.favoritos,titulo]})
-
+				
+			agregarFavoritos:(titulo)=>{
+				const store = getStore();
+				console.log("agregar favoritos: "+titulo)
+				setStore({favoritos:[...store.favoritos,titulo]})
+	
+			},
+			borrarFavoritos:(index)=>{
+				const store = getStore();
+				setStore({favoritos:[...store.favoritos.filter((fav)=>fav.id !== index)]})
+			
+			},
+			
 		},
 		
 	}
