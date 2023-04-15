@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {Context} from "../store/appContext";
 
+
 export const Cards= (props)=>{
  
     return <div classNameName="container text-center m-5"> 
@@ -41,28 +42,17 @@ export const Card2=(props)=>{
         
 
       <Link to={props.route}>  
-                  <a className="btn btn-warning" onClick={props.action}>Ver detalle</a> 
+                <button className="btn btn-warning" onClick={props.action}>Ver detalle</button> 
                 </Link>
                 
     
                 <button className="btn btn-danger m-2" onClick={()=>{
                   actions.agregarFavoritos(props.titulo)
                 }}>{props.favoritos} ♥︎</button>
-        
-  
-
-       
-
-      </div>
-     
-       
-     
-
-    
       
-              
-    </div>
-    
+
+      </div>            
+    </div>   
   </div>
 </div>
 

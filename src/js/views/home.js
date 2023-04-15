@@ -20,7 +20,7 @@ export const Home = () => {
 			titulo="Buscar personajes"
 			route="/personajes"
 			img="https://www.giantfreakinrobot.com/wp-content/uploads/2021/05/star-wars-cancelled-1200x675.jpg"
-		
+		    favorito="♥︎"
 		/>
 
 		
@@ -29,7 +29,7 @@ export const Home = () => {
 		 titulo="Buscar planetas" 
 		 route="/planetas"
 		 img= "https://sm.ign.com/t/ign_nordic/gallery/e/every-plan/every-planet-and-location-in-star-wars-battlefront-2s-multip_34bd.1080.jpg"
-		 
+		 favorito="♥︎"
 		 />	
 			
 		
