@@ -21,14 +21,12 @@ export const Navbar = () => {
 
 
   <ul className="dropdown-menu text-dark">
-    {store.favoritos.map((value,index)=>{
-						return ( <li key={index} className="dropdown-item">{value}
-						<i className="fas fa-trash-alt" 
-		                   onClick= {()=>{
-			                  actions.borrarFavoritos(value.id);
-			              }}></i> 
-		             </li> 
-				)})}
+  {store.favoritos.map((value,index)=>{
+								return (<li key={index} className="dropdown-item">{value} 
+								<button className="btn btn-warning m-1"
+								  onClick={()=>{ actions.deleteFav(value.name);
+								  }}>🗑️</button> </li>)
+							})}
 
 				
   </ul>

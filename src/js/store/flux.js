@@ -67,9 +67,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({favoritos:[...store.favoritos,titulo]})
 	
 			},
-			borrarFavoritos:(index)=>{
+			deleteFav: (index) => {
 				const store = getStore();
-				setStore({favoritos:[...store.favoritos.filter((fav)=>fav.id !== index)]})
+				const newFavoritos = [...store.favoritos]; 
+				newFavoritos.splice(index, 1);
+				setStore({ favoritos: newFavoritos });
 			
 			},
 			
