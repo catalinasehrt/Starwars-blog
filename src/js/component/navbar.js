@@ -24,7 +24,7 @@ export const Navbar = () => {
   {store.favoritos.map((value,index)=>{
 								return (<li key={index} className="dropdown-item">{value} 
 								<button className="btn btn-warning m-1"
-								  onClick={()=>{ actions.deleteFav(value.name);
+								  onClick={()=>{ actions.deleteFav(index);
 								  }}>🗑️</button> </li>)
 							})}
 
